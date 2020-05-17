@@ -1,7 +1,6 @@
 [row,col,v] = find(imdata);
 outmat = zeros(size(imdata), 'like', imdata);
-% step one: build basis tensor B (see (3) of "Multilinear image analysis for
-% facial recognition")
+% step one: build basis tensor B
 B = tmprod(S,U{2},2);
 B = tmprod(B, U{3},3);
 B = tmprod(B, U{4},4);
